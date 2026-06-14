@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url(./assets/fonts/BricolageGrotesque.ttf) format("truetype");
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-stone-900 bg-white dark:text-stone-400 dark:bg-stone-900;
+  }
+}
+
+@theme {
+  --font-sans: "BricolageGrotesque", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #ff5001;
+}
+
+#docs-content img {
+  @apply cursor-pointer hover:opacity-90 transition-opacity rounded shadow-sm border border-stone-200 dark:border-stone-700;
+}
