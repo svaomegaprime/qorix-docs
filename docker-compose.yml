@@ -13,7 +13,7 @@ services:
     restart: unless-stopped
 
     ports:
-      - "4500:4500"
+      - "4500:80"
 
     networks:
       - qorix-popup-docs-network
